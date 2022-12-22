@@ -2,21 +2,19 @@ name: Build and Deploy
 on: [push]
 permissions:
   contents: write
-
 jobs:
-  # Build and deploy job
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      -name: Checkout
-      uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v3
       
-      -name: Install and Build
-      run: |
-        npm ci
-        npm run build
+      - name: Install and Build
+        run: |
+          npm ci
+          npm run build
 
-      -name: Deploy
-      uses: JamesIves/github-pages-deploy-action@v4
-      with:
-        folder: docs
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: docs
