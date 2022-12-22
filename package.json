@@ -1,0 +1,31 @@
+{
+  "name": "leaderboard",
+  "version": "0.1.0",
+  "description": "Leader Board web application that shows a list of Names and Scores and let user add new Scores.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elafildecolor/LeaderBoard.git"
+  },
+  "keywords": [],
+  "author": "Paul Sáenz Sucre",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/elafildecolor/LeaderBoard/issues"
+  },
+  "homepage": "https://github.com/elafildecolor/LeaderBoard#readme",
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.26.0",
+    "hint": "^7.1.3",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^21.0.0",
+    "stylelint-csstree-validator": "^1.9.0",
+    "stylelint-scss": "^3.21.0"
+  }
+}
