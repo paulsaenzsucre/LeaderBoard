@@ -7,14 +7,22 @@ class ScoreBoardPresenter {
   #view;
 
   constructor() {
-    this.#view = new ScoreBoardView(this);
     this.#model = [];
+    this.#view = new ScoreBoardView(this);
+  }
+
+  get view() {
+    return this.#view;
+  }
+
+  get model() {
+    return this.#model;
   }
 
   addScore = (scoreName, scorePoints) => {
     const scorePresenter = new ScorePresenter(scoreName, scorePoints);
     this.#model.push(scorePresenter);
-    this.#view.addScoreView(scorePresenter.ui);
+    this.#view.addScoreViewUi(scorePresenter.view.ui);
   }
 }
 

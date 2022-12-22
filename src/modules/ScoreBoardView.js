@@ -1,40 +1,31 @@
 class ScoreBoardView {
-  #container;
-
   #presenter;
 
   #ui;
 
-  constructor(container, presenter) {
-    this.#container = container;
+  constructor(presenter) {
     this.#presenter = presenter;
     this.#ui = this.#createDOMElements();
   }
 
-  render = () => {
-    this.#container.appendChild(this.#ui);
+  get ui() {
+    return this.#ui;
   }
+
+  addScoreViewUi = (scoreViewUi) => this.#ui.appendChild(scoreViewUi);
 
   #createDOMElements = () => {
-    const section = document.createElement('section');
-    section.setAttribute('class','scoreboard-cont');
-    const heading = document.createElement('div');
-    const title = document.createElement('h2');
-    title.setAttribute('class', 'scoreboard-title');
-    title.innerText = 'Recent scores';
-    heading.appendChild(title);
-    const btn = document.createElement('button');
-    btn.setAttribute('type', 'button');
-    btn.setAttribute('class', 'refresh-btn');
-    btn.innerText = 'Refresh';
-    btn.addEventListener('click', this.#refresh());
-    heading.appendChild(btn);
+    const scoreList = document.createElement('ul');
+    scoreList.setAttribute('class', 'scoreboard');
 
-    section.appendChild(heading);
-    return section;
+    if (this.#presenter.model.length > 0) {
+      this.#presenter.model.forEach(
+        (scorePresenter) => scoreList.appendChild(scorePresenter.view.ui),
+      );
+    }
+
+    return scoreList;
   }
-
-  #refresh = () => {};
 }
 
 export default ScoreBoardView;

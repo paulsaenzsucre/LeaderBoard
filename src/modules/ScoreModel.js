@@ -8,19 +8,19 @@ class ScoreModel {
     this.#points = points;
   }
 
-  get Name() {
+  get name() {
     return this.#name;
   }
 
-  set Name(value) {
+  set name(value) {
     this.#name = value;
   }
 
-  get Points() {
+  get points() {
     return this.#points;
   }
 
-  set Points(value) {
+  set points(value) {
     this.#points = value;
   }
 }

@@ -6,20 +6,18 @@ class ScorePresenter {
 
   #view;
 
-  constructor(container, name, points) {
+  constructor(name, points) {
     this.#model = new ScoreModel(name, points);
-    this.#view = new ScoreView(container, this);
+    this.#view = new ScoreView(this);
   }
 
-  get Model() {
+  get model() {
     return this.#model;
   }
 
-  get View() {
+  get view() {
     return this.#view;
   }
-
-  renderView = () => this.#view.render();
 }
 
 export default ScorePresenter;
