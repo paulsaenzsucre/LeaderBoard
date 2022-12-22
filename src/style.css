@@ -1,3 +1,39 @@
-h1 {
-  color: red;
+* {
+  box-sizing: border-box;  
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.score-list-item {
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.score-card {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 1rem;
+}
+
+.score-name,
+.score-points {
+  display: inline;
+}
+
+.score-name {
+  text-transform: capitalize;
+}
+
+.score-name::after {
+  content: ':';
+}
+
+.score-points::before {
+  content: ' ';
+  margin: 0 0.5rem;
 }
