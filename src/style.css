@@ -12,6 +12,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 1rem;
 }
 
 .refresh-btn,
@@ -20,7 +21,7 @@ body {
 }
 
 .refresh-btn {
-  margin: auto 1rem;
+  margin-left: 1rem;
   border: 2px solid black;
   outline: none;
   background: none;
