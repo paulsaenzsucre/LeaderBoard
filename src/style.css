@@ -8,6 +8,28 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.heading-cont {
+  
+}
+
+.refresh-btn,
+.scoreboard-title {
+  display: inline-block;
+}
+
+.refresh-btn {
+  margin: auto 1rem;
+  border: 2px solid black;
+  outline: none;
+  background: none;
+  box-shadow: 4px 4px 0px 0px rgb(0 0 0);
+  padding: 0.25rem 1rem;
+}
+
+.scoreboard-title {
+  margin: auto 0;
+}
+
 .score-list-item {
   list-style-type: none;
   text-decoration: none;
