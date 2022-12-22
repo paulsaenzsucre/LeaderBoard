@@ -1,16 +1,25 @@
+import ScoreModel from './ScoreModel.js';
+import ScoreView from './ScoreView.js';
+
 class ScorePresenter {
-  constructor() {
-    this.name = 'Paul';
-    this.points = 157;
+  #model;
+
+  #view;
+
+  constructor(container, name, points) {
+    this.#model = new ScoreModel(name, points);
+    this.#view = new ScoreView(container, this);
   }
 
-  get getName() {
-    return this.name;
+  get Model() {
+    return this.#model;
   }
 
-  get getPoints() {
-    return this.points;
+  get View() {
+    return this.#view;
   }
+
+  renderView = () => this.#view.render();
 }
 
 export default ScorePresenter;

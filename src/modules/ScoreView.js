@@ -20,11 +20,11 @@ class ScoreView {
     const div = document.createElement('div');
     div.setAttribute('class', 'score-card');
     element = document.createElement('p');
-    element.innerText = this.#presenter.getName;
+    element.innerText = this.#presenter.Model.Name;
     element.setAttribute('class', 'score-name');
     div.appendChild(element);
     element = document.createElement('p');
-    element.innerText = this.#presenter.getPoints;
+    element.innerText = this.#presenter.Model.Points;
     element.setAttribute('class', 'score-points');
     div.appendChild(element);
     const listItem = document.createElement('li');
