@@ -1,10 +1,13 @@
 import './style.css';
 import ScoreBoardPresenter from './modules/ScoreBoardPresenter.js';
+import ScoreFormPresenter from './modules/ScoreFormPresenter';
 
 const container = document.getElementById('container');
-const presenter = new ScoreBoardPresenter();
-presenter.addScore('Paul', 100);
-presenter.addScore('Juan', 50);
-presenter.addScore('David', 70);
+const scoreboard = new ScoreBoardPresenter();
+const scoreform = new ScoreFormPresenter(scoreboard);
+scoreboard.addScore('Paul', 100);
+scoreboard.addScore('Juan', 50);
+scoreboard.addScore('David', 70);
 
-container.appendChild(presenter.view.ui);
+container.appendChild(scoreboard.view.ui);
+container.appendChild(scoreform.view.ui);
