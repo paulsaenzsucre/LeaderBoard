@@ -1,21 +1,29 @@
 * {
-  box-sizing: border-box;  
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: 'Comic Sans MS', 'Comic Sans', cursive;
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
+h1 {
+  margin: 2rem 1rem;
 }
 
 input[type=text] {
-  border: 2px solid black;
+  border: 0.125rem solid black;
   padding: 0.25rem 1rem;
 }
 
 label,
 input[type=text] {
   width: 100%;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3rem;
+  padding: 0 3rem;
 }
 
 .heading-cont {
@@ -29,14 +37,16 @@ input[type=text] {
 .scoreboard-title {
   display: inline-block;
 }
+
 input[type=submit],
 .refresh-btn {
   margin-left: 1rem;
-  border: 2px solid black;
+  border: 0.125rem solid black;
   outline: none;
   background: none;
-  box-shadow: 4px 4px 0px 0px rgb(0 0 0);
+  box-shadow: 0.25rem 0.25rem 0 0 rgb(0 0 0);
   padding: 0.25rem 1rem;
+  font-weight: bolder;
 }
 
 .scoreboard-title {
