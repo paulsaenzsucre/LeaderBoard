@@ -9,7 +9,9 @@ body {
 }
 
 .heading-cont {
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .refresh-btn,
@@ -33,6 +35,15 @@ body {
 .score-list-item {
   list-style-type: none;
   text-decoration: none;
+}
+
+.scoreboard {
+  border: black solid 0.2rem;
+  background: lightskyblue;
+}
+
+.scoreboard li:nth-child(even) {
+  background: antiquewhite;
 }
 
 .score-card {
