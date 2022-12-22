@@ -8,6 +8,16 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+input[type=text] {
+  border: 2px solid black;
+  padding: 0.25rem 1rem;
+}
+
+label,
+input[type=text] {
+  width: 100%;
+}
+
 .heading-cont {
   display: flex;
   justify-content: space-between;
@@ -19,7 +29,7 @@ body {
 .scoreboard-title {
   display: inline-block;
 }
-
+input[type=submit],
 .refresh-btn {
   margin-left: 1rem;
   border: 2px solid black;
@@ -70,4 +80,16 @@ body {
 .score-points::before {
   content: ' ';
   margin: 0 0.5rem;
+}
+
+.score-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.form-btn {
+  align-self: flex-end;
 }
