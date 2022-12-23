@@ -14,8 +14,6 @@ class ScoreBoardView {
     return this.#ui;
   }
 
-  addScoreViewUi = (scoreViewUi) => this.#listUi.appendChild(scoreViewUi);
-
   #createDOMElements = () => {
     const section = document.createElement('section');
     section.setAttribute('class', 'scoreboard-cont');
@@ -29,23 +27,20 @@ class ScoreBoardView {
     btn.setAttribute('type', 'button');
     btn.setAttribute('class', 'refresh-btn');
     btn.innerText = 'Refresh';
-    btn.addEventListener('click', this.#refresh());
+    btn.addEventListener('click', this.refresh);
     heading.appendChild(btn);
     this.#listUi = document.createElement('ul');
     this.#listUi.setAttribute('class', 'scoreboard');
-
-    if (this.#presenter.model.length > 0) {
-      this.#presenter.model.forEach(
-        (scorePresenter) => this.#listUi.appendChild(scorePresenter.view.ui),
-      );
-    }
-
+    this.refresh();
     section.appendChild(heading);
     section.appendChild(this.#listUi);
     return section;
   }
 
-  #refresh = () => {}
+  refresh = async () => {
+    const uis = await this.#presenter.scoreUis();
+    this.#listUi.replaceChildren(...uis);
+  }
 }
 
 export default ScoreBoardView;

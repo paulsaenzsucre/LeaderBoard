@@ -23,6 +23,11 @@ class ScoreModel {
   set points(value) {
     this.#points = value;
   }
+
+  toJSON = () => ({
+    user: this.#name,
+    score: this.#points,
+  })
 }
 
 export default ScoreModel;
