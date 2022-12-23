@@ -4,7 +4,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: 'Chivo Mono', monospace;;
+  font-family: 'Chivo Mono', monospace;
 }
 
 h1 {
@@ -41,7 +41,7 @@ input[type=text] {
   overflow-y: scroll;
   border: 0.2rem solid black;
   border-radius: 0.5rem;
-  padding: 0.5rem;  
+  padding: 0.5rem;
   box-shadow: 0.3rem 0.3rem 0 0 rgb(0 0 0);
 }
 
@@ -69,11 +69,11 @@ input[type=submit],
   display: flex;
   justify-content: flex-start;
   list-style-type: none;
-  text-decoration: none;  
+  text-decoration: none;
   margin-top: 0.5rem;
   height: 5rem;
   border-radius: 0.25rem;
-  font-size: 600;
+  font-weight: 600;
   color: white;
 }
 
