@@ -10,11 +10,10 @@ class LeaderBoardService {
 
   getScores = async () => {
     const scorePresenters = [];
-    await fetch(this.#baseUrl)
+    const scores = await fetch(this.#baseUrl)
       .then((response) => response.json())
-      .then((json) => json.result.forEach(
-        ({ user, score }) => scorePresenters.push(new ScorePresenter(user, score)),
-      ));
+      .then((json) => json.result.sort((a, b) => b.score - a.score));
+    scores.forEach(({ user, score }) => scorePresenters.push(new ScorePresenter(user, score)));
 
     return scorePresenters;
   }
