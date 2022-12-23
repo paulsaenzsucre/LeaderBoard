@@ -13,13 +13,14 @@ class LeaderBoardService {
     await fetch(this.#baseUrl)
       .then((response) => response.json())
       .then((json) => json.result.forEach(
-        ({user, score}) => scorePresenters.push(new ScorePresenter(user, score))));
+        ({ user, score }) => scorePresenters.push(new ScorePresenter(user, score)),
+      ));
 
     return scorePresenters;
   }
 
   postScore = async (scoreModel) => {
-    const response = await fetch(this.#baseUrl , {
+    const response = await fetch(this.#baseUrl, {
       method: 'POST',
       body: JSON.stringify(scoreModel),
       headers: {

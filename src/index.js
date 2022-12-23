@@ -8,4 +8,4 @@ import ScoreFormPresenter from './modules/ScoreFormPresenter.js';
   const scoreform = new ScoreFormPresenter(scoreboard);
   container.appendChild(scoreboard.view.ui);
   container.appendChild(scoreform.view.ui);
-}) ();
+})();
