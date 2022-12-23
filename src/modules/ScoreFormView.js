@@ -24,6 +24,7 @@ class ScoreFormView {
     this.#form = document.createElement('form');
     this.#form.setAttribute('class', 'score-form');
     this.#form.addEventListener('submit', this.#submit);
+    this.#form.addEventListener('keypress', this.#keypress);
     section.appendChild(this.#form);
     const title = document.createElement('h2');
     title.setAttribute('class', 'form-title');
@@ -55,6 +56,12 @@ class ScoreFormView {
     evt.preventDefault();
     this.#presenter.submit(this.#name.value, this.#points.value);
     this.#reset();
+  }
+
+  #keypress = (evt) => {
+    if (evt.key === 'Enter') {
+      this.#form.dispatchEvent('submit');
+    }
   }
 
   #reset = () => this.#form.reset();
