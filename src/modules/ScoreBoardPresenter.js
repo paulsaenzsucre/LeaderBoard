@@ -1,5 +1,6 @@
 import ScorePresenter from './ScorePresenter.js';
 import ScoreBoardView from './ScoreBoardView.js';
+import LeaderBoardService from './LeaderboardService.js';
 
 class ScoreBoardPresenter {
   #model;
@@ -7,7 +8,7 @@ class ScoreBoardPresenter {
   #view;
 
   constructor() {
-    this.#model = [];
+    this.#model = new LeaderBoardService();
     this.#view = new ScoreBoardView(this);
   }
 
@@ -19,10 +20,17 @@ class ScoreBoardPresenter {
     return this.#model;
   }
 
-  addScore = (scoreName, scorePoints) => {
+  scoreUis = async () => {
+    const uis = [];
+    const presenters = await this.#model.getScores();
+    presenters.forEach((scorePresenter) => uis.push(scorePresenter.view.ui));
+    return uis;
+  }
+
+  addScore = async (scoreName, scorePoints) => {
     const scorePresenter = new ScorePresenter(scoreName, scorePoints);
-    this.#model.push(scorePresenter);
-    this.#view.addScoreViewUi(scorePresenter.view.ui);
+    await this.#model.postScore(scorePresenter.model);
+    await this.#view.refresh(); // Fetching data for better user experience.
   }
 }
 
