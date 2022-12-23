@@ -30,9 +30,9 @@
 
 # 📖 Leaderboard <a name="about-project"></a>
 
-**Leaderboard** is a project that let users to see a list of scores. It also provide user a form to add his own scores to the list.
+**Leaderboard** is a project that let users to see a list of scores. It also provide user a form to add his own scores to the list. It uses the Leaderboard API to get and post scores.
 
-This project is coded with standard languages like HTML, CSS and JavaScript.
+This project is coded with standard languages like HTML5, CSS3 and JavaScript.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -43,14 +43,16 @@ This project is coded with standard languages like HTML, CSS and JavaScript.
   <ul>
     <li><a href="https://html.spec.whatwg.org/multipage/">HTML 5 </a></li>
     <li><a href="https://html.spec.whatwg.org/multipage/">CSS 3 </a></li>
-    <li><a href="https://html.spec.whatwg.org/multipage/">JavaScript </i></a></li>
+    <li><a href="https://html.spec.whatwg.org/multipage/">JavaScript </a></li>
+    <li><a href="https://www.notion.so/Leaderboard-API-service-24c0c3c116974ac49488d4eb0267ade3">Leaderboard API </a></li>
   </ul>
 </details>
 
 ### Key Features <a name="key-features"></a>
 
 - **You can see a score list.**
-- **You can add a new score to the list.**
+- **You can fetch scores from the Leaderboard API**
+- **You can add a new score and send it to the Leaderboard API.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -134,8 +136,8 @@ npx eslint .
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Fetch data from Leaderboard API**
-- [ ] **Send data to Leaderboard API**
+- [ ] **Manage more than one game scores**
+- [ ] **Ordering the score list**
 - [ ] **Drag and drop to reorder scores**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
