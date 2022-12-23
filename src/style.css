@@ -1,12 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@400;600;700&display=swap');
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+  font-family: 'Chivo Mono', monospace;;
 }
 
 h1 {
   margin: 2rem 1rem;
+  font-weight: 700;
 }
 
 input[type=text] {
@@ -33,6 +36,15 @@ input[type=text] {
   margin-bottom: 1rem;
 }
 
+.scoreboard {
+  height: 70vh;
+  overflow-y: scroll;
+  border: 0.2rem solid black;
+  border-radius: 0.5rem;
+  padding: 0.5rem;  
+  box-shadow: 0.3rem 0.3rem 0 0 rgb(0 0 0);
+}
+
 .refresh-btn,
 .scoreboard-title {
   display: inline-block;
@@ -54,17 +66,15 @@ input[type=submit],
 }
 
 .score-list-item {
+  display: flex;
+  justify-content: flex-start;
   list-style-type: none;
-  text-decoration: none;
-}
-
-.scoreboard {
-  border: black solid 0.2rem;
-  background: lightskyblue;
-}
-
-.scoreboard li:nth-child(even) {
-  background: antiquewhite;
+  text-decoration: none;  
+  margin-top: 0.5rem;
+  height: 5rem;
+  border-radius: 0.25rem;
+  font-size: 600;
+  color: white;
 }
 
 .score-card {
@@ -72,6 +82,11 @@ input[type=submit],
   align-items: center;
   justify-content: flex-start;
   padding: 0 1rem;
+  gap: 1rem;
+}
+
+.avatar {
+  height: 3rem;
 }
 
 .score-name,
