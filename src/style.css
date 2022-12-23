@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+}
+
+h1 {
+  margin: 2rem 1rem;
+}
+
+input[type=text] {
+  border: 0.125rem solid black;
+  padding: 0.25rem 1rem;
+}
+
+label,
+input[type=text] {
+  width: 100%;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3rem;
+  padding: 0 3rem;
+}
+
+.heading-cont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.refresh-btn,
+.scoreboard-title {
+  display: inline-block;
+}
+
+input[type=submit],
+.refresh-btn {
+  margin-left: 1rem;
+  border: 0.125rem solid black;
+  outline: none;
+  background: none;
+  box-shadow: 0.25rem 0.25rem 0 0 rgb(0 0 0);
+  padding: 0.25rem 1rem;
+  font-weight: bolder;
+}
+
+.scoreboard-title {
+  margin: auto 0;
+}
+
+.score-list-item {
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.scoreboard {
+  border: black solid 0.2rem;
+  background: lightskyblue;
+}
+
+.scoreboard li:nth-child(even) {
+  background: antiquewhite;
+}
+
+.score-card {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 1rem;
+}
+
+.score-name,
+.score-points {
+  display: inline;
+}
+
+.score-name {
+  text-transform: capitalize;
+}
+
+.score-name::after {
+  content: ':';
+}
+
+.score-points::before {
+  content: ' ';
+  margin: 0 0.5rem;
+}
+
+.score-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.form-btn {
+  align-self: flex-end;
+}
