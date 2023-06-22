@@ -58,7 +58,7 @@ This project is coded with standard languages like HTML5, CSS3 and JavaScript.
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://elafildecolor.github.io/LeaderBoard/)
+- [Live Demo Link](https://www.paulsaenzsucre.dev/LeaderBoard/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
